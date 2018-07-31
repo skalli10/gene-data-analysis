@@ -1,0 +1,55 @@
+************
+COPY FILES
+************
+rm -rf TabakoffData
+cp -r /net/compbio/stroma/Archive/tzu/PINIA/TabakoffData .
+rm -rf EdenbergData
+cp -r /net/compbio/stroma/Archive/tzu/PINIA/EdenbergData .
+rm -rf Hitzeman*
+cp -r /net/compbio/stroma/Archive/tzu/PINIA/Hitzeman* .
+
+----------------------------
+cd Hitzeman*
+
+mkdir WholeBrainCelFiles
+cp -rf 'whole brain cel files' WholeBrainCelFiles
+
+cd WholeBrainCelFiles/MOE430A
+
+mv 04A-11H2F_D2W1_037RH.CEL 04A-11H2F_D2W1_037RH.CEL.bad
+mv 04A-11H2F_D2W1_037RH.CEL.xml 04A-11H2F_D2W1_037RH.CEL.xml.bad
+
+mv 04A-12H2F_D2W1_047RH.CEL 04A-12H2F_D2W1_047RH.CEL.bad
+mv 04A-12H2F_D2W1_047RH.CEL.xml 04A-12H2F_D2W1_047RH.CEL.xml.bad
+
+mv 05A-11H2F_D2W2_037RH.CEL 05A-11H2F_D2W2_037RH.CEL.bad
+mv 05A-11H2F_D2W2_037RH.CEL.xml 05A-11H2F_D2W2_037RH.CEL.xml.bad
+
+mv 05A-12H2F_D2W2_047RH.CEL 05A-12H2F_D2W2_047RH.CEL.bad
+mv 05A-12H2F_D2W2_047RH.CEL.xml 05A-12H2F_D2W2_047RH.CEL.xml.bad
+
+cd /home/sajni/Project_May14/HitzemannData/WholeBrainCelFiles/U74B
+
+mv 01A-12H1G_B6W1_047RH.CEL.xml	  01A-11H2B_B6W1_047RH.CEL.xml
+mv 02A-12H1G_B6W2_047RH.CEL.xml	  02A-11H2B_B6W2_047RH.CEL.xml
+mv 03A-12H1G_B6W3_047RH.CEL.xml	  03A-11H2B_B6W3_047RH.CEL.xml
+mv 04A-12H1G_D2W1_047RH.CEL.xml	  04A-11H2B_D2W1_047RH.CEL.xml
+mv 05A-12H1G_D2W2_047RH.CEL.xml	  05A-11H2B_D2W2_047RH.CEL.xml
+mv 06A-12H1G_D2W3_047RH.CEL.xml	  06A-11H2B_D2W3_047RH.CEL.xml
+
+-----------------------------
+cd EdenbergData
+mv WS02R422.CEL WS02R422.CEL.bad
+mv WS02R422.CEL.xml WS02R422.CEL.xml.bad
+------------------------------
+
+cd Taba*/Affy_IHAFTILAFT_U74Av2 
+mv Sanjiv_H1_9-3-03_MGU74Av2.CEL Sanjiv_H1_9-3-03_MGU74Av2.CEL.bad
+mv Sanjiv_H1_9-3-03_MGU74Av2.CEL.xml Sanjiv_H1_9-3-03_MGU74Av2.CEL.xml.bad
+
+cd ../Affy_AC7_WTvsHetero_C57_U74Av2
+mv 'Sanjiv_1_4-9-04_MGU74Av2.CEL .xml' 'Sanjiv_1_4-9-04_MGU74Av2.CEL.xml'
+
+ls TabakoffData/Affy_AC7_WTvsHetero_C57_U74Av2 | sed -e 's/.CEL.Rdata//g' -e  's/.CEL.xml//g' -e  '/^.*.txt$/d' -e  '/^.*.R$/d' -e  '/^.*.xls$/d' -e  '/^.*.CEL$/d' -e  '/^.*.R~$/d' -e  '/^.*.bad$/d' | sort | uniq
+
+ 

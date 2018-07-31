@@ -1,0 +1,25 @@
+<ND>
+    <Phenotype_analysis>
+        <Experiment>
+            <Experiment_id>  </Experiment_id>
+            <Binary_data>     
+                <Path_to_CEL_files> </Path_to_CEL_files>
+                <data> </data>
+            </Binary_data>
+            <Meta_data>       </Meta_data>
+        </Experiment>
+    </Phenotype_analysis>
+    
+    <Phenotype_analysis>     
+        <Experiment>
+            <Experiment_id>  </Experiment_id>
+            <Binary_data>     
+                <Path_to_CEL_files> </Path_to_CEL_files>
+                <data> </data>
+            </Binary_data>
+            <Meta_data>       </Meta_data>
+        </Experiment>
+    </Phenotype_analysis>
+</ND>
+
+    
